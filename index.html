@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="kk">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Қазақстан тарихы — Қысқаша дерек</title>
+  <style>
+    :root{
+      --bg:#0f1724;
+      --card:#0b1220;
+      --accent:#46b0ff;
+      --muted:#9fb6d8;
+      --glass: rgba(255,255,255,0.03);
+      --radius:12px;
+      font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    }
+    html,body{height:100%; margin:0; background:
+      linear-gradient(180deg,#071025 0%, #0f1724 60%); color:#e6f2ff;}
+    .wrap{max-width:980px; margin:28px auto; padding:28px; background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); border-radius:16px; box-shadow:0 10px 30px rgba(2,6,23,0.6);}
+    header{display:flex; gap:16px; align-items:center; justify-content:space-between;}
+    .brand{display:flex; gap:14px; align-items:center;}
+    .logo{width:56px; height:56px; border-radius:10px; background:linear-gradient(135deg,var(--accent),#2ecb90); display:grid; place-items:center; font-weight:700; color:#012; box-shadow:0 6px 18px rgba(70,176,255,0.12);}
+    h1{font-size:20px; margin:0;}
+    p.lead{margin:6px 0 0; color:var(--muted); font-size:13px;}
+    nav{margin-top:18px; display:flex; gap:8px; flex-wrap:wrap;}
+    .btn{background:var(--glass); border:1px solid rgba(255,255,255,0.04); padding:10px 14px; border-radius:10px; cursor:pointer; color:var(--muted); font-weight:600; transition:all .18s; text-decoration:none;}
+    .btn:hover{transform:translateY(-2px); box-shadow:0 6px 18px rgba(0,0,0,0.4);}
+    .btn.active{background:linear-gradient(90deg,var(--accent),#2ecb90); color:#012; border:none;}
+    main{display:grid; grid-template-columns:1fr; gap:18px; margin-top:18px;}
+    .card{background:rgba(255,255,255,0.02); padding:18px; border-radius:var(--radius); border:1px solid rgba(255,255,255,0.03);}
+    .section-title{display:flex; align-items:center; gap:10px;}
+    .section-title h2{margin:0; font-size:18px;}
+    .muted{color:var(--muted); font-size:13px;}
+    ul{margin:8px 0 0 18px; color: #d8eefe;}
+    .toc{display:flex; gap:10px; flex-wrap:wrap;}
+    footer{margin-top:18px; color:var(--muted); font-size:13px; text-align:center;}
+    @media (max-width:600px){
+      .brand{flex-direction:column; align-items:flex-start;}
+      .logo{width:48px;height:48px;}
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap" role="main">
+    <header>
+      <div class="brand">
+        <div class="logo">ҚЗ</div>
+        <div>
+          <h1>Қазақстан тарихы</h1>
+          <p class="lead">Ежелгі кезеңнен бүгінгі күнге дейінгі қысқаша шолу — оқуға жеңіл, түсінікті.</p>
+        </div>
+      </div>
+      <div style="font-size:14px; font-weight:600;">Автор: Қуаныш</div>
+    </header>
+
+    <nav aria-label="Негізгі бөлімдер" class="toc">
+      <button class="btn active" data-target="ancient">Ежелгі Қазақстан</button>
+      <button class="btn" data-target="khans">Қазақ хандығы</button>
+      <button class="btn" data-target="soviet">КСРО кезеңі</button>
+      <button class="btn" data-target="independence">Тәуелсіздік</button>
+      <button class="btn" data-target="modern">Қазіргі Қазақстан</button>
+    </nav>
+
+    <main>
+      <section id="ancient" class="card" data-visible>
+        <div class="section-title"><h2>Ежелгі Қазақстан</h2></div>
+        <p class="muted">(б.з.д. — X ғ.)</p>
+        <p>
+          Қазақстан жері ежелден көшпенді халықтардың мекені болған. Қола дәуірінен бастап сақ, ғұн, үйсін тайпаларының мәдениеті мен
+          шаруашылығы дамыды. Ұлы Жібек жолы арқылы сауда, өнер және дін таралды.
+        </p>
+      </section>
+
+      <section id="khans" class="card" hidden>
+        <div class="section-title"><h2>Қазақ хандығы</h2></div>
+        <p class="muted">XV — XVIII ғғ.</p>
+        <p>
+          1465 жылы Керей мен Жәнібек сұлтандар Қазақ хандығын құрды. Бұл қазақ халқының мемлекеттік тәуелсіздігіне алғашқы қадам болды.
+          Хандар елдің аумағын кеңейтіп, бірлікті сақтауға тырысты.
+        </p>
+      </section>
+
+      <section id="soviet" class="card" hidden>
+        <div class="section-title"><h2>КСРО кезеңі</h2></div>
+        <p class="muted">1920–1991 жж.</p>
+        <p>
+          Кеңестік дәуірде индустрияландыру, білім мен мәдениет дамыды. Бірақ аштық, қуғын-сүргін және экологиялық мәселелер де орын алды.
+        </p>
+      </section>
+
+      <section id="independence" class="card" hidden>
+        <div class="section-title"><h2>Тәуелсіздік</h2></div>
+        <p class="muted">1991 жылдан бастап</p>
+        <p>
+          1991 жылы 16 желтоқсанда Қазақстан өз тәуелсіздігін жариялады. Егемен ел ретінде жаңа конституция қабылданып,
+          саяси және экономикалық реформалар жүргізілді.
+        </p>
+      </section>
+
+      <section id="modern" class="card" hidden>
+        <div class="section-title"><h2>Қазіргі Қазақстан</h2></div>
+        <p class="muted">XXI ғасыр</p>
+        <p>
+          Қазіргі таңда Қазақстан — тұрақты дамып келе жатқан, халықаралық деңгейде беделге ие мемлекет. Сандық технологиялар,
+          ғылым және жасыл экономикаға көңіл бөлінуде.
+        </p>
+      </section>
+    </main>
+
+    <footer class="card">
+      <div style="display:flex; justify-content:space-between; align-items:center; gap:12px; flex-wrap:wrap;">
+        <div class="muted">Барлық мәліметтер қысқаша түрде берілген.</div>
+        <div style="font-size:13px">© Қазақстан тарихы</div>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    const buttons = document.querySelectorAll('.btn');
+    const sections = document.querySelectorAll('main section');
+
+    function showSection(id){
+      sections.forEach(s=>{
+        s.hidden = s.id !== id;
+      });
+      buttons.forEach(b=>{
+        b.classList.toggle('active', b.dataset.target === id);
+      });
+      document.getElementById(id).scrollIntoView({behavior:'smooth', block:'start'});
+    }
+
+    buttons.forEach(b=>{
+      b.addEventListener('click', ()=> showSection(b.dataset.target));
+    });
+
+    showSection('ancient');
+  </script>
+</body>
+</html>
